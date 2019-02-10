@@ -28,7 +28,7 @@ final class RunLoopThreadScheduler: ImmediateSchedulerType {
                         on: thread,
                         with: nil,
                         waitUntilDone: false,
-                        modes: [RunLoop.Mode.default.rawValue])
+                        modes: [RunLoopMode.defaultRunLoopMode.rawValue])
         
         let actionDisposable = Disposables.create {
             action = nil
@@ -45,7 +45,7 @@ final class RunLoopThreadScheduler: ImmediateSchedulerType {
 private final class ThreadTarget: NSObject {
     @objc fileprivate func threadEntryPoint() {
         let runLoop = RunLoop.current
-        runLoop.add(NSMachPort(), forMode: RunLoop.Mode.default)
+        runLoop.add(NSMachPort(), forMode: RunLoopMode.defaultRunLoopMode)
         runLoop.run()
     }
 }

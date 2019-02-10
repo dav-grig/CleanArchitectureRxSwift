@@ -19,7 +19,7 @@ class PostsViewController: UIViewController {
     private func configureTableView() {
         tableView.refreshControl = UIRefreshControl()
         tableView.estimatedRowHeight = 64
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     private func bindViewModel() {

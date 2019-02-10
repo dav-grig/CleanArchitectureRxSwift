@@ -67,7 +67,7 @@ final class EditPostViewController: UIViewController {
                                           message: "Something went wrong",
                                           preferredStyle: .alert)
             let action = UIAlertAction(title: "Dismiss",
-                                       style: UIAlertAction.Style.cancel,
+                                       style: .cancel,
                                        handler: nil)
             alert.addAction(action)
             vc.present(alert, animated: true, completion: nil)
